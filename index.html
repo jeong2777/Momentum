@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello user!</title>
+    <link href="css/index.css" rel="stylesheet"></link>
+  </head>
+  <body>
+    <div class='smallbox'>
+      <form id="login-form" class="hidden">
+        <input
+          type="text"
+          required
+          maxlength="10"
+          placeholder="What is your name :)"
+        />
+        <button>Log in</button>
+      </form>
+      <h1 id="greeting" class="hidden"></h1>
+    </div>
+
+    <div class='smallbox'>
+      <div id=dday_div>
+        <!--<h3>올해의 마지막까지</h3>-->
+        <h3>올해의 마지막 날까지</h3>
+        <h2></h2>
+      </div>
+    </div>
+
+    <div class='smallbox'>
+      <h2 class='todotitle'>To do List</h2>
+      <form id='todo_form'>
+        <input type="text" required placeholder="ex) 고양이 놀아주기">
+      </form>
+      <ul id='todo_list'></ul>
+    </div>
+
+    <div class='smallbox'>
+      <div id="lotto_div">
+        <button>인생은 한방👍</button><br>
+        <span id='lucky'></span>
+      </div>
+    </div>
+
+   <div class="smallbox">
+       <ul id='weather'>
+         <li></li>
+         <li></li>
+         <li></li>
+       </ul>
+   </div>
+
+   <div class='smallbox'>
+    <button id='bgchange_btn'>Click me❤</button>
+  </div>
+      
+    <script src="js/login.js"></script>
+    <script src="js/d-day.js"></script>
+    <script src="js/lotto.js"></script>
+    <script src="js/bgChange.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
+  </body>
+</html>
