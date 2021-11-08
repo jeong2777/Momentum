@@ -19,11 +19,9 @@ a {
 }
 body {
   font-family: "KyoboHand";
-  margin: 75px 70px;
+  margin: 75px 71px;
   text-align: center;
   background: 100% no-repeat;
-  display: flex;
-  flex-wrap: wrap;
   font-size: 16px;
 }
 input {
@@ -37,9 +35,17 @@ button {
   border: none;
 }
 
+section {
+  width: 1281px;
+  height: 550px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
 /*smallbox*/
 .smallbox {
-  width: 33.33%;
+  width: 427px;
   height: 275px;
   background: rgba(255, 255, 255, 0.6);
   box-sizing: border-box;
@@ -48,10 +54,10 @@ button {
   padding: 100px;
 }
 .smallbox:nth-child(2) {
-  padding: 90px;
+  padding: 40px;
 }
 .smallbox:nth-child(3) {
-  padding: 40px;
+  padding: 90px;
 }
 .smallbox:nth-child(4) {
   padding: 98px;

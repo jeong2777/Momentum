@@ -12,7 +12,7 @@ function onGeoOk(position) {
       const tempBox = document.querySelector("#weather li:first-child");
       const nameBox = document.querySelector("#weather li:nth-child(2)");
       const weatherBox = document.querySelector("#weather li:last-child");
-      tempBox.innerText = data.main.temp;
+      tempBox.innerText = `${data.main.temp}°`;
       nameBox.innerText = data.name;
       weatherBox.innerText = `${data.weather[0].main}`;
     });
@@ -20,7 +20,7 @@ function onGeoOk(position) {
 
 //유저의 정보를 가져오지 못한 경우 경고창을 띄웁니다.
 function onGeoError() {
-  alert("Can't find you. No weather for youㅠ");
+  alert("Can't find you. No weather for you ;(");
 }
 
 navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);

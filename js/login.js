@@ -1,7 +1,8 @@
 const loginForm = document.querySelector("#login-form");
 const loginInput = loginForm.querySelector("input");
 const loginBtn = loginForm.querySelector("button");
-const greeting = document.querySelector("h1#greeting");
+const greeting = document.querySelector("#greeting");
+const nameuser = document.querySelector("#username");
 
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
@@ -14,26 +15,40 @@ function onSubmitUsername(event) {
   if (username.length < 2) {
     alert("2글자 이상의 이름을 입력하세요!");
   } else {
-    makeGreeting(username);
+    timeGreeting();
+    makeUsername(username);
     loginForm.classList.toggle(HIDDEN_CLASSNAME);
     localStorage.setItem(USERNAME_KEY, username);
   }
 }
 
-//greeting에 유저이름을 넣고 hidden 클래스 명을 조절합니다.
-function makeGreeting(username) {
-  greeting.innerText = `안녕하세요! \n${username}님`;
+//greeting에 시간에 맞는 인사를 넣고 hidden 클래스 명을 조절합니다.
+function timeGreeting() {
+  const now = new Date().getTime();
+  const hour = Math.floor((now % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   greeting.classList.toggle(HIDDEN_CLASSNAME);
+  if (hour <= 6 && hour > 12) {
+    greeting.innerText = "Good Morning,";
+  } else if (hour <= 12 && hour > 18) {
+    greeting.innerText = "Good Afternoon,";
+  } else {
+    greeting.innerText = "Good Evening,";
+  }
+}
+
+//nameuser에 유저이름을 넣고 hidden 클래스 명을 조절합니다.
+function makeUsername(name) {
+  nameuser.innerText = `${name}`;
+  nameuser.classList.toggle(HIDDEN_CLASSNAME);
 }
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
 
 //localStorage의 유저이름 저장여부에 따라 나타나는 화면을 다르게 만듭니다.
 if (savedUsername === null) {
-  //유저이름이 저장되어 있지 않다면 loginForm부터 보여줍니다.
   loginForm.classList.toggle(HIDDEN_CLASSNAME);
   loginForm.addEventListener("submit", onSubmitUsername);
 } else {
-  //유저이름이 저장되어 있다면 greeting 내용을 보여줍니다.
-  makeGreeting(savedUsername);
+  timeGreeting();
+  makeUsername(savedUsername);
 }
