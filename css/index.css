@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "KyoboHand";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/KyoboHand.woff")
+  font-family: "S-CoreDream-3Light";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff")
     format("woff");
   font-weight: normal;
   font-style: normal;
@@ -18,7 +18,7 @@ a {
   color: #000;
 }
 body {
-  font-family: "KyoboHand";
+  font-family: "S-CoreDream-3Light";
   margin: 75px 71px;
   text-align: center;
   background: 100% no-repeat;
@@ -51,19 +51,19 @@ section {
   box-sizing: border-box;
 }
 .smallbox:nth-child(1) {
-  padding: 100px;
+  padding: 107px;
 }
 .smallbox:nth-child(2) {
   padding: 40px;
 }
 .smallbox:nth-child(3) {
-  padding: 90px;
+  padding: 97px;
 }
 .smallbox:nth-child(4) {
-  padding: 98px;
+  padding: 100px;
 }
 .smallbox:nth-child(5) {
-  padding: 92px;
+  padding: 112px;
 }
 .smallbox:nth-child(6) {
   padding: 121px;
@@ -77,15 +77,20 @@ section {
 /*todo list*/
 .todotitle {
   margin-bottom: 10px;
-  color: rgb(97 139 209);
+  color: rgb(0 102 174);
 }
 .todobutton {
   padding: 2px;
 }
 
+/*d-day*/
+#dday_div {
+  line-height: 1.7rem;
+}
+
 /*lotto*/
 #lotto_div button {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 #lucky {
   background-color: rgb(255 197 0);
@@ -93,12 +98,28 @@ section {
 }
 
 /*weather*/
+#weather {
+  width: 155px;
+  margin: auto;
+}
 #weather li {
-  font-size: 2rem;
+  width: 75px;
+}
+#weather li:nth-child(1) {
+  font-size: 2.4rem;
+  line-height: 3rem;
+  float: left;
+  color: rgb(0 102 174);
 }
 #weather li:nth-child(2) {
-  font-size: 1rem;
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+  float: right;
+  padding-top: 3px;
+  text-align: left;
 }
 #weather li:nth-child(3) {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
+  float: right;
+  text-align: left;
 }

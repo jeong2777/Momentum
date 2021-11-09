@@ -1,4 +1,4 @@
-const h2 = document.querySelector("div#dday_div h2");
+const h2 = document.querySelector("#dday_div h3");
 
 //올해의 마지막 날을 디데이로 구하는 함수를 만듭니다.
 function onUntilDday() {
@@ -18,7 +18,7 @@ function onUntilDday() {
     2,
     "0"
   );
-  h2.innerText = `${day}일 ${hour}시간 ${minute}분 ${second}초 \n남았습니다!`;
+  h2.innerText = `${day}일 ${hour}시간 ${minute}분 ${second}초`;
 }
 
 onUntilDday();
