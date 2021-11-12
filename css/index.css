@@ -21,7 +21,8 @@ body {
   font-family: "S-CoreDream-3Light";
   margin: 75px 71px;
   text-align: center;
-  background: 100% no-repeat;
+  background: 100%;
+  background-size: cover;
   font-size: 16px;
 }
 input {
@@ -99,7 +100,7 @@ section {
 
 /*weather*/
 #weather {
-  width: 155px;
+  width: 196px;
   margin: auto;
 }
 #weather li {
