@@ -21,8 +21,8 @@ body {
   font-family: "S-CoreDream-3Light";
   margin: 75px 71px;
   text-align: center;
-  background: 100%;
   background-size: cover;
+  background: no-repeat;
   font-size: 16px;
 }
 input {
