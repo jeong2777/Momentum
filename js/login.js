@@ -25,10 +25,11 @@ function onSubmitUsername(event) {
 //greeting에 시간에 맞는 인사를 넣고 hidden 클래스 명을 조절합니다.
 function timeGreeting() {
   const hour = new Date().getHours();
+  console.log(hour);
   greeting.classList.toggle(HIDDEN_CLASSNAME);
-  if (hour <= 6 && hour > 12) {
+  if (hour >= 6 && hour < 12) {
     greeting.innerText = "Good Morning,";
-  } else if (hour <= 12 && hour > 18) {
+  } else if (hour >= 12 && hour < 18) {
     greeting.innerText = "Good Afternoon,";
   } else {
     greeting.innerText = "Good Evening,";

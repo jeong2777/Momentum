@@ -113,14 +113,14 @@ section {
   color: rgb(0 102 174);
 }
 #weather li:nth-child(2) {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   line-height: 1.3rem;
   float: right;
   padding-top: 3px;
-  text-align: left;
+  text-align: right;
 }
 #weather li:nth-child(3) {
   font-size: 1.1rem;
   float: right;
-  text-align: left;
+  text-align: right;
 }
